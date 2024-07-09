@@ -25,7 +25,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       //body: SingleChildScrollView(
         body: Container(
-          color: const Color.fromRGBO(63, 81, 181, 1),
+          color: Color.fromARGB(255, 52, 82, 146),
           //height: height,
           width: width,
           child: Column(children: [
