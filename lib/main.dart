@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_room/dashboard.dart';
+import 'package:shop_room/presentation/screens/gestion/gestionar_screen.dart';
+import 'package:shop_room/presentation/screens/home/dashboard_screen.dart';
+import 'package:shop_room/presentation/screens/reports/report_screen.dart';
+import 'package:shop_room/presentation/screens/shop/shop_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Dashboard(),
+      home: DashboardScreen(),
+      routes: {
+        '/gestionar': (context) => const GestionarScreen(),
+        '/reportes': (context) => const ReportScreen(),
+        '/shop': (context) => const ShopScreen(),
+      },
     );
   }
 }

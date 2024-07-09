@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:shop_room/menu/menu_items.dart';
+import 'package:shop_room/presentation/screens/gestion/gestionar_screen.dart';
 
-class Dashboard extends StatelessWidget {
+class DashboardScreen extends StatelessWidget {
   var height, width;
   List imgData = [
     "images/mcqs.png",
@@ -17,6 +19,7 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    appMenuItems;
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -89,11 +92,19 @@ class Dashboard extends StatelessWidget {
                   ),
                   shrinkWrap: true,
                   //physics: NeverScrollableScrollPhysics(),  //evita el desplazamiento en SingleChildScrollView
-                  itemCount: imgData.length,
+                  //itemCount: imgData.length,
+                  itemCount: appMenuItems.length,
                   itemBuilder: (context, index) {
+                    final menuItem = appMenuItems[index];
                     return InkWell(
                       onTap: (){
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Tap'),)); //showMessage
+                        //ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Tap'),)); //showMessage
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(
+                        //     builder: (context) => const ProductsScreen(),
+                        //   ),
+                        // );
+                        Navigator.pushNamed(context, menuItem.link);
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 8,horizontal: 20),
@@ -107,9 +118,11 @@ class Dashboard extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Image.asset(imgData[index], width: 100,),
+                            //Image.asset(imgData[index], width: 100,),
+                            Image.asset(menuItem.icon, width: 100,),
                             Text(
-                              titles[index], 
+                              //titles[index], 
+                              menuItem.title, 
                               style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
                             )
                           ],
