@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GestionarScreen extends StatelessWidget {
+  static const String name = 'gestionar_screen';  //nombre de ruta estatico
   const GestionarScreen({super.key});
 
   @override

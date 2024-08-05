@@ -6,6 +6,9 @@ import 'package:shop_room/config/menu/menu_items.dart';
 import 'package:shop_room/presentation/screens/gestion/gestionar_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
+  static const String name = 'dashboard_screen';  //nombre de ruta estatico
+  //const DashboardScreen({super.key});
+
   var height, width;
   List imgData = [
     "images/mcqs.png",
@@ -99,6 +102,7 @@ class DashboardScreen extends StatelessWidget {
                     final menuItem = appMenuItems[index];
                     return InkWell(
                       onTap: (){
+                        //1er sistema de navegacion: flutter
                         //ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Tap'),)); //showMessage
                         // Navigator.of(context).push(
                         //   MaterialPageRoute(
@@ -106,9 +110,12 @@ class DashboardScreen extends StatelessWidget {
                         //   ),
                         // );
 
-                        //Navigator.pushNamed(context, menuItem.link);
+                        //2do sistema de navegacion: flutter
+                        // Navigator.pushNamed(context, menuItem.link);
 
+                        //3er sistema de navegacion: go router
                         context.push(menuItem.link);
+                        //context.pushNamed(GestionarScreen.name);
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 8,horizontal: 20),

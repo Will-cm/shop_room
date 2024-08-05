@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShopScreen extends StatelessWidget {
+  static const String name = 'shop_screen';  //nombre de ruta estatico
   const ShopScreen({super.key});
 
   @override
