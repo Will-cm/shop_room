@@ -18,7 +18,7 @@ const  MenuItem({  //constructor
 // ---------------data------------------------
 const appMenuItems =  <MenuItem>[
   MenuItem(
-    title: 'GESTION',
+    title: 'GESTIÓN',
     subTitle: 'Gestionar data',
     link: '/gestionar',
     icon: 'images/mcqs.png', //Icons.smart_button_outlined
@@ -27,7 +27,7 @@ const appMenuItems =  <MenuItem>[
     title: 'SHOP',
     subTitle: 'Visualizar catálogo',
     link: '/shop',
-    icon: 'images/quiz.png', //Icons.credit_card
+    icon: 'images/iconshop2.png', //Icons.credit_card
   ),
   MenuItem(
     title: 'REPORTES',
@@ -42,22 +42,22 @@ const appMenuItems =  <MenuItem>[
     icon: 'images/pastpapers.png', //Icons.credit_card
   ),
   MenuItem(
-    title: 'JOB',
+    title: 'TAREAS',
     subTitle: 'Visualizar reportes',
     link: '/',
-    icon: 'images/job.png', //Icons.credit_card
+    icon: 'images/icontask.png', //Icons.credit_card
   ),
   MenuItem(
-    title: 'ABOUT',
+    title: 'AYUDA',
     subTitle: 'Visualizar reportes',
     link: '/',
     icon: 'images/about.png', //Icons.credit_card
   ),
   MenuItem(
-    title: 'ABOUT',
+    title: 'AJUSTES',
     subTitle: 'Visualizar reportes',
     link: '/',
-    icon: 'images/about.png', //Icons.credit_card
+    icon: 'images/iconfig2.png', //Icons.credit_card
   ),
   
 ];

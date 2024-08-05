@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:shop_room/menu/menu_items.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shop_room/config/menu/menu_items.dart';
 import 'package:shop_room/presentation/screens/gestion/gestionar_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -50,7 +51,7 @@ class DashboardScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.white,
-                        image: DecorationImage(image: AssetImage("images/woman.png"))
+                        image: DecorationImage(image: AssetImage("images/iconman.png"))
                       ),
                     ),
                   ],),
@@ -66,7 +67,7 @@ class DashboardScreen extends StatelessWidget {
                     ),
                     //SizedBox(height: 2,),  // separacion
                     Text(
-                      "Last update: 6 Jul 2024", 
+                      "Last update: 01 Ago 2024", 
                       style: TextStyle(fontSize: 16,color: Colors.white54,letterSpacing: 1),
                     ),
                   ],),
@@ -104,7 +105,10 @@ class DashboardScreen extends StatelessWidget {
                         //     builder: (context) => const ProductsScreen(),
                         //   ),
                         // );
-                        Navigator.pushNamed(context, menuItem.link);
+
+                        //Navigator.pushNamed(context, menuItem.link);
+
+                        context.push(menuItem.link);
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 8,horizontal: 20),
