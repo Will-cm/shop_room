@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shop_room/config/menu/menu_items.dart';
+import 'package:shop_room/presentation/screens/gestion/gestionar_prod_screen.dart';
 import 'package:shop_room/presentation/screens/gestion/gestionar_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -116,6 +117,7 @@ class DashboardScreen extends StatelessWidget {
                         //3er sistema de navegacion: go router
                         context.push(menuItem.link);
                         //context.pushNamed(GestionarScreen.name);
+                        //context.pushNamed(GestionarProdScreen.name);
                       },
                       child: Container(
                         margin: EdgeInsets.symmetric(vertical: 8,horizontal: 20),

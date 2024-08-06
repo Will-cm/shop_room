@@ -14,6 +14,16 @@ final appRouter = GoRouter(
       path: '/gestionar',
       name: GestionarScreen.name,
       builder: (context, state) => GestionarScreen(),
+      routes: [
+        GoRoute(  //segundo nivel
+          path: 'gestionar_prod_screen/:id',
+          name: GestionarProdScreen.name,
+          builder: (context, state) {
+            final productoId = state.pathParameters['id'] ?? 'no-id';
+            return GestionarProdScreen(productoId: productoId);
+          },
+        ),
+      ]
     ),
     GoRoute(
       path: '/shop',
@@ -25,5 +35,6 @@ final appRouter = GoRouter(
       name: ReportScreen.name,
       builder: (context, state) => ReportScreen(),
     ),
+    
   ],
 );
